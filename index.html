@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mohamad Rosyadi // Web Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="progress-bar" id="progressBar"></div>
+
+    <nav class="nav">
+        <div class="nav-logo">MR<span class="accent">\</span></div>
+        <div class="nav-links" id="navLinks">
+            <a href="#work" class="nav-link"><span class="nav-num">[01]</span> Work</a>
+            <a href="#about" class="nav-link"><span class="nav-num">[02]</span> About</a>
+            <a href="#contact" class="nav-link"><span class="nav-num">[03]</span> Contact</a>
+        </div>
+        <div class="nav-actions">
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle Theme">
+                <span class="theme-icon">◐</span>
+            </button>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="hero-grid">
+            <div class="hero-label">
+                <span class="label-line"></span>
+                <span>PORTFOLIO_V2.0</span>
+            </div>
+
+            <h1 class="hero-title">
+                <span class="title-line">MOHAMAD</span>
+                <span class="title-line accent">ROSYADI_</span>
+            </h1>
+
+            <div class="hero-info">
+                <div class="info-block">
+                    <span class="info-label">[ ROLE ]</span>
+                    <span class="info-value">Frontend Web Developer</span>
+                </div>
+                <div class="info-block">
+                    <span class="info-label">[ CURRENT ]</span>
+                    <span class="info-value">Intern @ Codiora House</span>
+                </div>
+                <div class="info-block">
+                    <span class="info-label">[ FOCUS ]</span>
+                    <span class="info-value">Vanilla JS & UI Architecture</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-scroll">
+            <span>[ SCROLL DOWN ]</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <section class="work" id="work">
+        <div class="section-header">
+            <span class="section-num">01 /</span>
+            <h2 class="section-title">
+                SELECTED<br />WORKS<span class="accent">\</span>
+            </h2>
+        </div>
+
+        <div class="projects">
+            <article class="project">
+                <div class="project-head">
+                    <span class="project-num">[ 01 ]</span>
+                    <span class="project-status">IN_DEVELOPMENT</span>
+                    <span class="project-year">2026</span>
+                </div>
+                <h3 class="project-title">Stark Puzzle</h3>
+                <p class="project-desc">
+                    Interactive puzzle game controlled by hand gestures via webcam. 
+                    Uses MediaPipe Hands for real-time tracking. Built with vanilla JS 
+                    and HTML5 Canvas.
+                </p>
+                <div class="project-tags">
+                    <span>MediaPipe</span>
+                    <span>Vanilla JS</span>
+                    <span>Canvas API</span>
+                </div>
+                <a href="https://stark-puzzle.vercel.app/" target="_blank" rel="noopener" class="project-link">
+                    <span>TRY_DEMO</span>
+                    <span class="arrow">-&gt;</span>
+                </a>
+            </article>
+
+            <article class="project">
+                <div class="project-head">
+                    <span class="project-num">[ 02 ]</span>
+                    <span class="project-year">2026</span>
+                </div>
+                <h3 class="project-title">Portfolio Website</h3>
+                <p class="project-desc">
+                    Personal landing page built for Codiora Week 1 & 2 tasks. 
+                    Features brutalist dark-mode design, responsive layout, 
+                    theme toggle, and interactive form validation.
+                </p>
+                <div class="project-tags">
+                    <span>HTML5</span>
+                    <span>CSS3</span>
+                    <span>Vanilla JS</span>
+                    <span>DOM API</span>
+                </div>
+                <a href="#home" class="project-link">
+                    <span>VIEW_LIVE</span>
+                    <span class="arrow">-&gt;</span>
+                </a>
+            </article>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="section-header">
+            <span class="section-num">02 /</span>
+            <h2 class="section-title">
+                ABOUT &<br />SKILLS<span class="accent">\</span>
+            </h2>
+        </div>
+
+        <div class="about-grid">
+            <div class="about-text">
+                <p class="about-lead">
+                    I am a frontend developer currently completing a remote internship
+                    at <strong class="accent">Codiora House</strong>. My main focus is
+                    mastering vanilla JavaScript and CSS architecture.
+                </p>
+                <p>
+                    I prefer writing clean, readable code over overly complex solutions.
+                    I believe that understanding how the web works under the hood is
+                    more important than just relying on frameworks. When I am not
+                    working on my internship tasks, I am usually experimenting with
+                    advanced CSS layouts or debugging my side projects.
+                </p>
+            </div>
+
+            <div class="about-side">
+                <div class="skills-terminal">
+                    <div class="term-header">// SYSTEM_PROFICIENCY</div>
+                    <div class="term-line">
+                        <span class="term-key">[ HTML5 ]</span>
+                        <span class="term-bar">//////////</span>
+                        <span class="term-val">ADVANCED</span>
+                    </div>
+                    <div class="term-line">
+                        <span class="term-key">[ CSS3  ]</span>
+                        <span class="term-bar">////////./</span>
+                        <span class="term-val">PROFICIENT</span>
+                    </div>
+                    <div class="term-line">
+                        <span class="term-key">[ JS    ]</span>
+                        <span class="term-bar">///////...</span>
+                        <span class="term-val">LEARNING</span>
+                    </div>
+                    <div class="term-line">
+                        <span class="term-key">[ GIT   ]</span>
+                        <span class="term-bar">//////....</span>
+                        <span class="term-val">BASIC</span>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-row">
+                        <span class="info-label">STATUS</span>
+                        <span class="info-value">Intern @ Codiora</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">LOCATION</span>
+                        <span class="info-value">Indonesia (Remote)</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">EDITOR</span>
+                        <span class="info-value">VS Code</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">DEPLOY</span>
+                        <span class="info-value">Vercel</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="contact-wrap">
+            <span class="section-num">03 /</span>
+            <h2 class="contact-title">LET'S TALK<span class="accent">_</span></h2>
+            <p class="contact-sub">
+                Have an interesting project or just want to talk about code?
+            </p>
+
+            <form id="contactForm" class="contact-form" novalidate>
+                <div class="form-group">
+                    <label for="name">[ NAME ]</label>
+                    <input type="text" id="name" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">[ EMAIL ]</label>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">[ MESSAGE ]</label>
+                    <textarea id="message" rows="5" placeholder="Type your message..." required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">
+                    <span>SEND_MESSAGE</span>
+                    <span class="arrow">-&gt;</span>
+                </button>
+                <div id="formMessage" class="form-message"></div>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <span>@Mohamad.Rosyadi_</span>
+    </footer>
+
+    <div class="status-bar">
+        <span>[ SYS ] portfolio_v2.0.0</span>
+        <span id="clock">--:--:--</span>
+        <span>UTC+7</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
