@@ -35,7 +35,7 @@
         <div class="hero-grid">
             <div class="hero-label">
                 <span class="label-line"></span>
-                <span>PORTFOLIO_V2.0</span>
+                <span>PORTFOLIO_V3.0</span>
             </div>
 
             <h1 class="hero-title">
@@ -57,6 +57,11 @@
                     <span class="info-value">Vanilla JS & UI Architecture</span>
                 </div>
             </div>
+
+            <div class="hero-actions">
+                <a href="#work" class="btn-primary">VIEW_PROJECTS</a>
+                <a href="#" class="btn-outline" id="downloadResume">DOWNLOAD_RESUME</a>
+            </div>
         </div>
 
         <div class="hero-scroll">
@@ -69,55 +74,69 @@
         <div class="section-header">
             <span class="section-num">01 /</span>
             <h2 class="section-title">
-                SELECTED<br />WORKS<span class="accent">\</span>
+                PROJECTS<br />GALLERY<span class="accent">\</span>
             </h2>
         </div>
 
-        <div class="projects">
-            <article class="project">
-                <div class="project-head">
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">ALL</button>
+            <button class="filter-btn" data-filter="web">WEB</button>
+            <button class="filter-btn" data-filter="game">GAME</button>
+            <button class="filter-btn" data-filter="portfolio">PORTFOLIO</button>
+        </div>
+
+        <div class="projects-grid">
+            <article class="project-card" data-category="game">
+                <div class="project-card-head">
                     <span class="project-num">[ 01 ]</span>
                     <span class="project-status">IN_DEVELOPMENT</span>
-                    <span class="project-year">2026</span>
                 </div>
-                <h3 class="project-title">Stark Puzzle</h3>
-                <p class="project-desc">
+                <h3 class="project-card-title">Stark Puzzle</h3>
+                <p class="project-card-desc">
                     Interactive puzzle game controlled by hand gestures via webcam. 
-                    Uses MediaPipe Hands for real-time tracking. Built with vanilla JS 
-                    and HTML5 Canvas.
+                    Uses MediaPipe Hands for real-time tracking.
                 </p>
                 <div class="project-tags">
                     <span>MediaPipe</span>
-                    <span>Vanilla JS</span>
                     <span>Canvas API</span>
+                    <span>Vanilla JS</span>
                 </div>
-                <a href="https://stark-puzzle.vercel.app/" target="_blank" rel="noopener" class="project-link">
-                    <span>TRY_DEMO</span>
-                    <span class="arrow">-&gt;</span>
-                </a>
+                <button class="project-card-btn" data-project="stark-puzzle">VIEW_DETAILS</button>
             </article>
 
-            <article class="project">
-                <div class="project-head">
+            <article class="project-card" data-category="portfolio">
+                <div class="project-card-head">
                     <span class="project-num">[ 02 ]</span>
-                    <span class="project-year">2026</span>
                 </div>
-                <h3 class="project-title">Portfolio Website</h3>
-                <p class="project-desc">
-                    Personal landing page built for Codiora Week 1 & 2 tasks. 
-                    Features brutalist dark-mode design, responsive layout, 
-                    theme toggle, and interactive form validation.
+                <h3 class="project-card-title">Portfolio Website</h3>
+                <p class="project-card-desc">
+                    Personal portfolio built for Codiora internship. Features brutalist 
+                    design, theme toggle, and interactive form.
                 </p>
                 <div class="project-tags">
                     <span>HTML5</span>
                     <span>CSS3</span>
                     <span>Vanilla JS</span>
-                    <span>DOM API</span>
                 </div>
-                <a href="#home" class="project-link">
-                    <span>VIEW_LIVE</span>
-                    <span class="arrow">-&gt;</span>
-                </a>
+                <button class="project-card-btn" data-project="portfolio">VIEW_DETAILS</button>
+            </article>
+
+            <article class="project-card" data-category="web">
+                <div class="project-card-head">
+                    <span class="project-num">[ 03 ]</span>
+                    <span class="project-status">PLANNED</span>
+                </div>
+                <h3 class="project-card-title">Roda Arisan</h3>
+                <p class="project-card-desc">
+                    Digital arisan management system with real-time sync using Firebase.
+                    Features automated draw and participant tracking.
+                </p>
+                <div class="project-tags">
+                    <span>Firebase</span>
+                    <span>Vanilla JS</span>
+                    <span>Real-time</span>
+                </div>
+                <button class="project-card-btn" data-project="arisan">VIEW_DETAILS</button>
             </article>
         </div>
     </section>
@@ -205,17 +224,20 @@
                 <div class="form-group">
                     <label for="name">[ NAME ]</label>
                     <input type="text" id="name" placeholder="Enter your name" required>
+                    <span class="error-message" id="nameError"></span>
                 </div>
                 <div class="form-group">
                     <label for="email">[ EMAIL ]</label>
                     <input type="email" id="email" placeholder="Enter your email" required>
+                    <span class="error-message" id="emailError"></span>
                 </div>
                 <div class="form-group">
                     <label for="message">[ MESSAGE ]</label>
                     <textarea id="message" rows="5" placeholder="Type your message..." required></textarea>
+                    <span class="error-message" id="messageError"></span>
                 </div>
                 <button type="submit" class="submit-btn">
-                    <span>SEND_MESSAGE</span>
+                    <span id="submitText">SEND_MESSAGE</span>
                     <span class="arrow">-&gt;</span>
                 </button>
                 <div id="formMessage" class="form-message"></div>
@@ -228,9 +250,16 @@
     </footer>
 
     <div class="status-bar">
-        <span>[ SYS ] portfolio_v2.0.0</span>
+        <span>[ SYS ] portfolio_v3.0.0</span>
         <span id="clock">--:--:--</span>
         <span>UTC+7</span>
+    </div>
+
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div id="modalBody"></div>
+        </div>
     </div>
 
     <script src="script.js"></script>
